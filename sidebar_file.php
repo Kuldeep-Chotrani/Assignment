@@ -1,9 +1,9 @@
         </ul>
           </div>
-      <!--<div class="sidebar_base"></div>-->
+      <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <!--<div class="sidebar_top"></div>-->
+          <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <ul>
               
@@ -26,11 +26,11 @@
           </div>
 
 
-      <!--<div class="sidebar_base"></div>-->
+      <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-         <!--<div class="sidebar_top"></div>-->
-       <div class="sidebar_item">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
           <?php
             if($_SESSION['userrole']=="HOSPITAL")
             {

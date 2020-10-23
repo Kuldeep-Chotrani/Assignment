@@ -7,7 +7,6 @@ if(isset($_SESSION['userrole'])===false){
 }
 ?>
 
-
 <?php include 'header_file.php'; ?>
 <?php include 'Custom_Menu_file.php'; ?>
 <?php include('sidebar_file.php'); ?>
@@ -19,11 +18,11 @@ if(isset($_SESSION['userrole'])===false){
         {
 
 ?>
-          <h1>Log In</h1>
+          <h1>Sign In</h1>
              <form method="post" name="login_form" action="Login.php">
                 <table>
                 <p>
-                  <tr><td>Email</td><td><input type="text" name="login_email" value=""/></td></tr>
+                  <tr><td>email</td><td><input type="text" name="login_email" value=""/></td></tr>
                   <tr><td>Password</td><td><input type="password" name="login_password" value=""/></td></tr>
                   <tr><td></td><td><input type="submit" name="login_submit" value="Sign In"/></td></tr>
                 </p>
@@ -36,7 +35,7 @@ if(isset($_SESSION['userrole'])===false){
          {
          
          ?>
-            <h1>Welcome back</h1>
+            <h1>Welcome!!</h1>
 
          <?php
 

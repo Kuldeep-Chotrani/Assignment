@@ -18,7 +18,7 @@ img
 { border: 0;}
 
 h1, h2, h3, h4, h5, h6 
-{ color: black;
+{ color: #E7746F;
   letter-spacing: 0em;
   padding: 0 0 5px 0;}
 
@@ -50,7 +50,7 @@ h5, h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: gray;}
+  color: #009FBC;}
 
 a:hover
 { text-decoration: none;}
@@ -94,12 +94,18 @@ ol li
 #main, #logo, #menubar, #site_content, #footer
 { margin-left: auto; 
   margin-right: auto;}
+
+#header
+{ background: #1d1d1d url(pattern.png) repeat;
+  border-bottom: 2px solid #E7746F;
+  height: 177px;}
   
 #banner
-{ background: transparent url(Blood1.jpg) no-repeat;
+{ background: transparent url(banner.jpg) no-repeat;
+  width: 870px;
   height: 180px;
   margin-bottom: 20px;
-  border: 5px solid black;}
+  border: 5px solid #E7746F;}
 
 #logo
 { width: 880px;
@@ -119,25 +125,21 @@ ol li
   margin: 0 0 0 9px;}
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover 
-{ padding: 5px 5px 5px 75px;
-  color: black;
-  font-size:70px;
+{ padding: 22px 0 0 0;
+  color: #FFF;
   letter-spacing: 0.1em;
-  text-decoration: bolder;
-  height: 80px;
-  left: 20px
-  }
+  text-decoration: none;}
 
 #logo_text h1 a .logo_colour
-{ color: black;}
+{ color: #E7746F;}
 
 #logo_text a:hover .logo_colour
-{ color: black;}
+{ color: #FFF;}
 
 #logo_text h2
-{ font-size: 2-0%;
+{ font-size: 120%;
   padding: 4px 0 0 0;
-  color: black;}
+  color: #FFF;}
 
 #menubar
 { width: 880px;
@@ -166,23 +168,20 @@ ul#menu li a
   background: transparent;} 
 
 ul#menu li.selected a
-{ 
-  font-size: 20px;
-   padding: 12px 28px;
-  text-align: center;}
+{ height: 20px;
+  padding: 6px 35px 5px 28px;}
 
 ul#menu li.selected
-{ margin: 1px 2px 2px 1px;
-  background: gray;
-  text-align: center;}
- 
+{ margin: 1px 2px 0 0;
+  background: #E7746F;}
+
 ul#menu li.selected a, ul#menu li.selected a:hover
-{ background: transparent;
+{ background: #E7746F;
   color: #FFF;}
 
 ul#menu li a:hover
 { color: #FFF;
-  background: black;}
+  background: #E7746F;}
 
 #site_content
 { width: 880px;
@@ -241,11 +240,11 @@ ul#menu li a:hover
 { width: 100%;
   font-family: 'trebuchet ms', sans-serif;
   font-size: 100%;
-  height: 200px;
+  height: 80px;
   padding: 28px 0 5px 0;
   text-align: center; 
-  background: transparent url(Blood2.png) repeat;
-  border-top: 2px solid black;
+  background: transparent url(pattern.png) repeat;
+  border-top: 2px solid #E7746F;
   color: #FFF;}
 
 #footer p
@@ -253,7 +252,7 @@ ul#menu li a:hover
   padding: 0 0 10px 0;}
 
 #footer a
-{ color: black;
+{ color: #E7746F;
   text-decoration: none;}
 
 #footer a:hover
@@ -294,7 +293,7 @@ ul#menu li a:hover
   height: 33px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
-  background: black; 
+  background: #E7746F; 
   color: #FFF;}
 
 .form_settings textarea, .form_settings select
@@ -322,7 +321,7 @@ table
 { margin: 10px 0 30px 0;}
 
 table tr th, table tr td
-{ background: black;
+{ background: #E7746F;
   color: #FFF;
   padding: 7px 4px;
   text-align: left;

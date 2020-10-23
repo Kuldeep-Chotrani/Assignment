@@ -3,8 +3,8 @@ session_start();
 
 if(isset($_REQUEST['submit_receiver_signup']))
     {
-               $conn= mysql_connect('localhost', 'root', '12345') or die(mysqli_connect_error());
-               mysql_select_db('bloodbank_database') or die(mysql_error());
+               $conn= mysqli_connect('localhost', 'root', '') or die(mysqli_connect_error());
+               mysqli_select_db($conn,'bloodbank_database') or die(mysqli_error());
 
                $Receiver_email     		= $_POST["Receiver_email"];
                $Receiver_FullName       = $_POST["Receiver_FullName"];
@@ -14,19 +14,19 @@ if(isset($_REQUEST['submit_receiver_signup']))
                $Receiver_Blood_Group    = $_POST['Receiver_Blood-Group'];
                $Receiver_Password =    $_POST["Receiver_Password"];
 
-               $Query1=mysql_query("SELECT * FROM bb_user_info WHERE User_Email='$Receiver_email'");
-               $rows=mysql_fetch_array($Query1);
-                if(sizeof($rows)==1)
+               $Query1=mysqli_query($conn,"SELECT * FROM bb_user_info WHERE User_Email='$Receiver_email'");
+               $rows=mysqli_fetch_array($Query1);
+                if(is_array($rows)==0)
                  {
-                   $Query2=mysql_query("INSERT INTO receiver_table (User_Email, Full_Name, Age, Contact, Address, BG) 
+                   $Query2=mysqli_query($conn,"INSERT INTO receiver_table (User_Email, Full_Name, Age, Contact, Address, BG) 
                               VALUES('$Receiver_email','$Receiver_FullName',$Receiver_Age ,$Receiver_Contact,
                               '$Receiver_Address','$Receiver_Blood_Group')");
 
                             if($Query2)
                             {    
 
-                              $Query3=mysql_query("INSERT INTO bb_user_info(User_Email, User_Password, User_Role) VALUES 
-                                ('$Receiver_email','$Receiver_Password','RECEIVER') ") or die(mysql_error());
+                              $Query3=mysqli_query($conn,"INSERT INTO bb_user_info(User_Email, User_Password, User_Role) VALUES 
+                                ('$Receiver_email','$Receiver_Password','RECEIVER') ");
 
                                       if($Query3)
                                         {

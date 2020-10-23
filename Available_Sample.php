@@ -42,18 +42,18 @@ include 'Connect_to_Database.php';
         <?php
         if ($_SESSION['userrole']===" ") {
                   ?>
-                  <h2>LogIn to continue</h2>
+                  <h2>Guest!! Kindly login before posting a request of your blood sample</h2>
                 <?php
                 }
         ?>
-        <h1 >Available Sample</h1>
+        <h1>Available Sample</h1>
         <form>
           <table>
             <p>
               <tr>
-                <td>Sample Id</td>
-                <td>Blood Group</td>
-                <td>Hospital Name</td>
+                <td>Sample_Id</td>
+                <td>Blood_Group</td>
+                <td>Hospital_Name</td>
                 <?php 
                 if ($_SESSION['userrole']==="HOSPITAL") {
                   ?>
@@ -87,7 +87,7 @@ include 'Connect_to_Database.php';
                         {
                         ?>
                          <td>
-                          <a href="Request_Sample.php?Blood_Sample_Id=<?php echo $id; ?>">Sample request</a>
+                          <a href="Request_Sample.php?Blood_Sample_Id=<?php echo $id; ?>">Request_Sample</a>
                          </td>
                         <?php 
                         }
@@ -100,7 +100,7 @@ include 'Connect_to_Database.php';
                     if($_SESSION['userrole']===" ")
                      {
                     ?>
-                      <td><a href="index.php">Sample request</a></td>
+                      <td><a href="index.php">Request_Sample</a></td>
                     <?php 
                      }
                      ?> 
