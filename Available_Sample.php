@@ -42,11 +42,11 @@ include 'Connect_to_Database.php';
         <?php
         if ($_SESSION['userrole']===" ") {
                   ?>
-                  <h2>LogIn to continue</h2>
+                  <h2>Please Log in to continue</h2>
                 <?php
                 }
         ?>
-        <h1 >Available Sample</h1>
+        <h1 >Available Samples</h1>
         <form>
           <table>
             <p>
@@ -83,7 +83,7 @@ include 'Connect_to_Database.php';
                     } 
                     if($_SESSION['userrole']==="RECEIVER")
                      {
-                        if($_SESSION['receiver_blood_group']===$blood_group)
+                        if($_SESSION['receiver_blood_group']==="BG")
                         {
                         ?>
                          <td>

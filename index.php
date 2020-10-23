@@ -17,8 +17,9 @@ if(isset($_SESSION['userrole'])===false){
     if($_SESSION['userrole']==" ")
         
         {
-
+	
 ?>
+	<div id = "Form1">
           <h1>Log In</h1>
              <form method="post" name="login_form" action="Login.php">
                 <table>
@@ -29,6 +30,7 @@ if(isset($_SESSION['userrole'])===false){
                 </p>
                 </table>
             </form>
+			</div>
         <?php 
          } 
 

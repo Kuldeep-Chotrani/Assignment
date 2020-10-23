@@ -4,16 +4,16 @@ session_start();
     if(isset($_REQUEST['submit_hospital_signup']))
     {
      
-               $conn= mysql_connect('localhost', 'root', 'admin') or die(mysqli_connect_error());
-               mysql_select_db('bloodbank_database') or die(mysql_error());
+               $conn= mysqli_connect('localhost', 'root', 'admin') or die(mysqli_connect_error());
+               mysqli_select_db( $conn,'BloodBank') or die(mysqli_error());
                $hospital_email     = $_POST["hospital_email"];
                $hospital_name      = $_POST["hospital_name"];
                $hospital_contact   = $_POST["hospital_contact"];
                $hospital_address   = $_POST["hospital_address"];
                $hospital_password  = $_POST["hospital_password"];
                
-               $Query1=mysql_query("SELECT * FROM bb_user_info WHERE User_Email='$hospital_email'");
-               $rows=mysql_fetch_array($Query1);
+               $Query1=mysqli_query($conn, "SELECT * FROM bb_user_info WHERE User_Email='$hospital_email'");
+               $rows=mysqli_fetch_array($Query1);
                 if(sizeof($rows)==1)
                  {
                    $Query2=mysql_query("INSERT INTO hospital_table (User_Email,Hospital_Name,Contact,Address) 

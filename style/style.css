@@ -127,7 +127,10 @@ ol li
   height: 80px;
   left: 20px
   }
-
+.Form1
+{
+	color: black;
+}
 #logo_text h1 a .logo_colour
 { color: black;}
 

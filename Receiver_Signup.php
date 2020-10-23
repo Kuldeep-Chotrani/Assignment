@@ -14,7 +14,7 @@
                 <tr>
                   <td>BloodGroup</td>
                   <td>
-                    <select id="id" name="Receiver_Blood-Group">
+                    <select id="id" name="Receiver_Blood_Group">
                     <option value=" ">Select your Blood Group</option>
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
