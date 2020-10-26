@@ -36,7 +36,7 @@ if (isset($_REQUEST['login_submit']))
 								       $_SESSION['hospital_name']=$hospital_name;
 			    			 }
     			    	    mysqli_stmt_close($stmt1);
-	    					header("Location:index.php");
+	    					header("Location:dash_hosp.php");
 						}
 			}
 			if($_SESSION['userrole']=="RECEIVER")
@@ -52,7 +52,7 @@ if (isset($_REQUEST['login_submit']))
 								       $_SESSION['receiver_blood_group']=$receiver_blood_group;
 			    			 }
     			    	    mysqli_stmt_close($stmt2);
-	    					header("Location:index.php");
+	    					header("Location:Dash_Receiver.php");
 						}
 			}
 					    /* close statement */

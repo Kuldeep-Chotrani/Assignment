@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_REQUEST['submit_receiver_signup']))
     {
-               $conn= mysqli_connect('localhost', 'root', '') or die(mysqli_connect_error());
+               $conn= mysqli_connect('localhost', 'root', '');
                mysqli_select_db($conn,'bloodbank_database') or die(mysqli_error());
 
                $Receiver_email     		= $_POST["Receiver_email"];
@@ -16,11 +16,9 @@ if(isset($_REQUEST['submit_receiver_signup']))
 
                $Query1=mysqli_query($conn,"SELECT * FROM bb_user_info WHERE User_Email='$Receiver_email'");
                $rows=mysqli_fetch_array($Query1);
-                if(is_array($rows)==0)
+                if(is_array($rows) == 0)
                  {
-                   $Query2=mysqli_query($conn,"INSERT INTO receiver_table (User_Email, Full_Name, Age, Contact, Address, BG) 
-                              VALUES('$Receiver_email','$Receiver_FullName',$Receiver_Age ,$Receiver_Contact,
-                              '$Receiver_Address','$Receiver_Blood_Group')");
+                   $Query2=mysqli_query($conn,"INSERT INTO receiver_table (User_Email, Full_Name, Age, Contact, Address, BG) VALUES('$Receiver_email','$Receiver_FullName','$Receiver_Age' ,'$Receiver_Contact', '$Receiver_Address','$Receiver_Blood_Group')");
 
                             if($Query2)
                             {    
@@ -43,7 +41,7 @@ if(isset($_REQUEST['submit_receiver_signup']))
                           else{
                                 echo "<script type='text/javascript'>alert('Incomplete or Incorrect Form Fields,Please Fill it again!!')</script>";
 
-                               header("refresh:0,url=Receiver_Signup.php");  
+                               // header("refresh:0,url=Receiver_Signup.php");  
 
                             }
                    }

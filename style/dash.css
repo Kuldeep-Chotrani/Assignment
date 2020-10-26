@@ -1,0 +1,305 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    background: #ffffff;
+}
+/*nav and side bar start*/
+.navbar
+{
+    position: relative;
+    width:100%;
+    left: 0px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    color: rgba(0, 0, 255,0.6);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 20px;
+    box-shadow: 0 3px 3px rgba(0,0,255,0.8);
+}
+
+.logo
+{
+    position: relative;
+    color: #2e4ead;
+    left: 85px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+
+.user
+{
+    position: absolute;
+    left:89%;
+    top: 20%;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff
+}
+
+.toggle
+{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.toggle.active
+{
+    background: #FFC0CB;
+}
+.toggle:before
+{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+.toggle.active:before
+{
+    content: '\f00d';
+}
+.sidenav
+{
+   position: fixed;
+   left: 0;
+   width: 70px;
+   height: 100%;
+   background-color: rgba(0, 0, 255, 0.6);
+   transition: 0.5s;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.sidenav ul
+{
+   position: absolute;
+   top: 60px;
+   left: 0;
+   width: 100%;
+}
+.sidenav ul li
+{
+    position: relative;
+    width: 100%;
+    line-height: 40px;
+    list-style: none;
+}
+
+.sidenav ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidenav ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 70px;
+    line-height: 90px;
+    text-align: center;
+}
+.sidenav ul li a .icon .fa
+{
+    font-size: 24px;
+}
+.sidenav ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 70px;
+    line-height: 90px;
+    text-align: start;
+    white-space: nowrap;
+}
+@media(max-width:241px)
+{
+    .sidenav
+    {
+       left: -60px;
+    }
+    .sidenav.active
+    {
+        left: 0px;
+        width: 100%;
+    }
+}
+/*nav and side bar end*/
+/*carousel start*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 85%;
+  position: relative;
+  margin: auto;    
+    margin-top: 50px;
+    margin-left: 130px;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*carousel end*/
+/*content start*/
+.content
+{
+    position: relative;
+    display: grid;
+    width: 90%;
+    height: auto;
+    top: 40px;
+    left: 80px;
+    padding: 5%;
+    grid-auto-flow:columns;    
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 70px;
+    grid-row-gap: 50px;
+}
+.backpage
+{
+    position: absolute;
+    left:0;
+    top: 20%;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff  
+}
+.con 
+{
+  padding: 4%;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color:  rgba(0, 0, 255, 0.6); 
+ 
+}
+h1
+{
+	 text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 100;  
+}
+h2
+{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 100;  
+}
+.dona
+{
+    width: 100%;
+    padding: 20px;
+}
+.bld
+{
+    width: 95%;
+    padding: 20px;
+}
+.btn
+{
+    position: relative;
+    left: 34%;
+    padding: 4px 6px;
+    text-align: center;
+    width: 30%;
+    height: 15%;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    background:rgba(0, 0, 255, 0.1); 
+}
+.btn:hover,.btn:focus
+{
+    color: rgba(0,0,255,0.8);
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    box-shadow: 0 3px 3px #ffffff;
+}
+/*content end*/

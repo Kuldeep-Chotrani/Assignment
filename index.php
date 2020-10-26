@@ -7,40 +7,71 @@ if(isset($_SESSION['userrole'])===false){
 }
 ?>
 
-<?php include 'header_file.php'; ?>
-<?php include 'Custom_Menu_file.php'; ?>
-<?php include('sidebar_file.php'); ?>
-
-<?php 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="./style/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <?php 
         
     if($_SESSION['userrole']==" ")
         
         {
 
 ?>
-          <h1>Sign In</h1>
-             <form method="post" name="login_form" action="Login.php">
-                <table>
-                <p>
-                  <tr><td>email</td><td><input type="text" name="login_email" value=""/></td></tr>
-                  <tr><td>Password</td><td><input type="password" name="login_password" value=""/></td></tr>
-                  <tr><td></td><td><input type="submit" name="login_submit" value="Sign In"/></td></tr>
-                </p>
-                </table>
+  <div class="container">
+    <div class="login-content">
+      <form method="post" name="login_form" action="Login.php">
+        <h2 class="title">Login</h2>
+              <div class="input-div one">
+                 <div class="i">
+                    <i class="fas fa-user"></i>
+                 </div>
+                 <div class="div">
+                    <h5>Username</h5>
+                    <input type="text" name="login_email" value="" class="input">
+                 </div>
+              </div>
+              <div class="input-div pass">
+                 <div class="i"> 
+                    <i class="fas fa-lock"></i>
+                 </div>
+                 <div class="div">
+                    <h5>Password</h5>
+                    <input type="password" name="login_password" value="" class="input">
+                 </div>
+              </div>
+              <input type="submit" name="login_submit" value="Sign In" class="btn"> 
+            <a href="Hospital_Signup.php">Register as Hospital</a>
+            <a href="Receiver_Signup.php" >Register as Reciever</a>       
             </form>
-        <?php 
+          
+        </div>
+        <script src="log_reg.js"></script>
+    </div>
+    <?php 
          } 
 
          else
          {
          
-         ?>
-            <h1>Welcome!!</h1>
+         if($_SESSION['userrole']=="HOSPITAL")
+      {
 
-         <?php
+                header("Location:dash_hosp.php");
+  
+      }
+      if($_SESSION['userrole']=="RECEIVER")
+      {
 
-         }
-         
-include 'footer_file.php';
+                header("Location:Dash_Receiver.php");
 
- ?>
+      }
+          } ?>
+</body>
+</html>
