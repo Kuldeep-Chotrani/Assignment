@@ -4,6 +4,7 @@
 if(isset($_REQUEST['add_info_submit'])) 
 	{
 			$new_info=$_POST['add_info'];
+			$quantity=$_POST['quantity'];
 			if ($new_info===" ") {
 				echo "<script type='text/javascript'>alert('No Blood type selected!')</script>";
                 header( "refresh:0.5; url=index.php" );
@@ -36,7 +37,7 @@ if(isset($_REQUEST['add_info_submit']))
 			    }
 			    if($flag==0)
 			    {
-				   $query1="INSERT into available_sample (blood_group,hospital_name) values('$new_info','$hospital_name')";
+				   $query1="INSERT into available_sample (blood_group,hospital_name,quantity) values('$new_info','$hospital_name','$quantity')";
 				    if($stmt1 = mysqli_prepare($link,$query1))
 				    {
 				    	    if(mysqli_stmt_execute($stmt1))

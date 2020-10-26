@@ -9,11 +9,6 @@ $query1="SELECT req.request_id,req.user_email,sample.blood_group
 	   WHERE req.request_id=sample.id AND sample.hospital_name='$hospital_name'";
 
 ?>
-
-
-
-        
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

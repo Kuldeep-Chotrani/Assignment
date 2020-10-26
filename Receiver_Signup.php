@@ -107,12 +107,14 @@
                  </div>
               </div>
               <input type="submit" name="submit_receiver_signup" value="Finish" class="btn" >
-        
+         <div class="col-12 pt-3 text-center">
+              <h5> Already have an account? Please  <a href="index.php" style = "font-size:15px;">login</a>&nbsp here</h5>
+              </div>
+              <div class="col-12 pt-3 text-center">
+              <h5>  Create your Hospital Account <a href="Hospital_Signup.php" style = "font-size:15px;">register</a>&nbsp here<h5>
+        </div> 
             </form>
-      <span>Already have an account? Please <a style ="width:157px; font-size: 20px; text-decoration: underline; margin-right: 50px;" href="log_reg.html">Login</a>here</span>
-  
-          <span>Want to register with Hospital account? Please <a style ="width:157px; font-size: 20px; text-decoration: underline;" href="reg.html">Register</a>here</span>
-     
+   
    </div>
         <script src="./js/receive.js"></script>
     </div>

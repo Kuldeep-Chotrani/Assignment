@@ -30,9 +30,83 @@ body{
 .img img{
 	width: 500px;
 }
+.navbar
+{
+    position: relative;
+    width:100%;
+    left: 0px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    color: rgba(0, 0, 255,0.6);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 20px;
+    box-shadow: 0 3px 3px rgba(0,0,255,0.8);
 
+}
+.logo
+{
+    color: #2e4ead;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+.logo a
+{
+	text-decoration: none;
+	margin-left: 800px;
+	
+}
+.dropbtn {
+
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  color: #2e4ead;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+	width: 300px;
+	margin-left: 700px;
+	margin-top: 10px;
+}
+
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  display:none;
+  position: fixed;
+  margin-left: 700px;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background-color: white;
+ 
+    
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.show {display: block;}
 form{
 	width: 360px;
+	height: 700px;
 }
 
 .login-content img{
@@ -40,7 +114,7 @@ form{
 }
 
 .login-content h2{
-	margin: 15px 0;
+	margin: 10px 0;
 	color: #333;
 	text-transform: uppercase;
 	font-size: 2.9rem;
@@ -50,7 +124,7 @@ form{
 	position: relative;
     display: grid;
     grid-template-columns: 7% 93%;
-    margin: 25px 0;
+    margin: 8px 0;
     padding: 2px 0;
     border-bottom: 2px solid #d9d9d9;
 }
@@ -136,14 +210,22 @@ form{
 }
 
 a{
-	display: block;
-	text-align: right;
-	text-decoration: none;
+	
+	
+	text-decoration: underline;
 	color: #999;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 	transition: .3s;
 }
-
+div.scroll {
+ overflow: scroll;
+  height: 700px;
+  width: 600px;
+ padding: 50px;
+direction: ltr;
+ margin-left: 100px;
+	
+}
 a:hover{
 	color: #f84d4c;
 }
